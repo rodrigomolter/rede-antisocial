@@ -1,0 +1,30 @@
+{{#postagens}}
+<div class="box box-success " id="postagembox">
+    <div class="box-header ">
+        <div class="box-body chat" id="chat-box">
+            <div class="pull-right box-tools">
+            </div>
+            <div class="item espacamento-3">
+                <img src="{{#usuario.avatar}}{{usuario.avatar}}{{/usuario.avatar}}" alt="user image" class="online">
+                <p class="message">
+                    <a class="name">
+                        <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> {{horaFormatada}}</small>
+                        {{#usuario}}{{usuario}}{{/usuario}}
+                    </a>
+                    <br>{{#mensagem}}{{mensagem}}{{/mensagem}}
+                </p>
+                <p>
+                     <!--BOTÃO DESCURTIR-->
+                  <div class="box-footer clearfix espacamento-2">
+                     <button type="button"  {{#descurtidoUsuario}} disabled {{/descurtidoUsuario}} class="btn btn-danger botao-descurtir descurtidas" id="descurtidas{{#idPostagem}}{{idPostagem}}{{/idPostagem}}" onclick = "descurtir({{#idPostagem}}{{idPostagem}}{{/idPostagem}},{{#descurtidas}}{{descurtidas}}{{/descurtidas}})">
+                      <i class="fa fa-thumbs-o-down"> </i>· Não curti!
+                        </button> <p class="p-margin descurtidas" id="contadorDescurtidas{{#idPostagem}}{{idPostagem}}{{/idPostagem}}">
+                          {{#descurtidas}}{{descurtidas}}{{/descurtidas}} pessoas descurtiram isso
+                         </p>
+                   </div> 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{{/postagens}}

@@ -1,0 +1,31 @@
+{{#resultado}}
+                        <!-- Post box -->
+                        <div class="box box-danger">
+                            <div class="box-header">
+                                <div class="box-body chat" id="box-search">
+                                    <!-- /. tools -->
+                                    <!-- feed item -->
+                                    <div class="item espacamento-3">
+                                        <img src="{{#avatar}}{{avatar}}{{/avatar}}" alt="user image" class="online" />
+                                        <p class="message">
+                                            <a class="name">
+                                                <i class="fa fa-user">{{#nome}} {{nome}} {{/nome}}!</i>
+                                            </a>
+                                            <br> 
+                        <i class="fa fa-home"> Mora em {{#localizacao}} {{localizacao}} {{/localizacao}}</i><br>
+                         <i class="fa fa-star-o">{{#dataNascimento}} {{dataNascimento}} {{/dataNascimento}}</i>
+                                        </p>
+                                        <p>
+                                            <!--BOTÃO PERSEGUIR MESMO CSS QUE O DESCURTIR-->
+                                            <button type="button" {{#usuarioPerseguido}} disabled {{/usuarioPerseguido}} id="perseguir{{#idUsuario}}{{idUsuario}}{{/idUsuario}}"class="btn btn-danger botao-perseguir"  onclick = "perseguir({{#idUsuario}}{{idUsuario}}{{/idUsuario}})" > 
+                                                <i class="fa fa-eye"> </i>· Perseguir! </button>
+                                                 </button> 
+                                    </div>
+                                  </p>
+                                    <!-- /.item -->
+                                </div>
+                                <!--post box-->
+                            </div>
+                            <!-- /.box (feed box) -->
+                        </div>
+{{/resultado}}

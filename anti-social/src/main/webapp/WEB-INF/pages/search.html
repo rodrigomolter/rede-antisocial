@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <title>Rede Anti-Social - Pesquisa </title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="/resources/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/resources/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="/resources/css/ionicons.css" rel="stylesheet" type="text/css" />
+    <link href="/resources/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="favicon.png" />
+</head>
+
+<body class="skin-blue">
+    <!-- logo [style em header.less] -->
+    <header class="header">
+        <a href="/home" class="logo">
+            <!-- Logo -->
+            <img src="/resources/img/logo.png">
+        </a>
+        <nav class="navbar navbar-static-top" role="navigation">
+
+            <!-- Sidebar toggle button-->
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <!--icone home-->
+                    <li class="dropdown tasks-menu">
+                        <a href="/search">
+                            <i class="fa fa-search icone-maior active"></i>
+                        </a>
+
+                    <li class="dropdown tasks-menu">
+                        <a href="/home">
+                            <i class="fa fa-home icone-maior"></i>
+                        </a> </li>
+                    <!-- NOTIFICAÇÕES DE MENSAGENS - style em dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">Você tem 4 notificações</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li>
+                                        <!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="/resources/img/avatar3.png" class="img-circle" alt="User Image" />
+                                            </div>
+                                            <h4>
+                                                Exemplo 1
+                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            </h4>
+                                            <p>Mensagem de Exemplo 1</p>
+                                        </a>
+                                    </li>
+                                    <!-- end message -->
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="/resources/img/avatar2.png" class="img-circle" alt="user image" />
+                                            </div>
+                                            <h4>
+                                                Pessoa 2
+                                                <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                            </h4>
+                                            <p>Mensagem de exemplo 2</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="/resources/img/avatar.png" class="img-circle" alt="user image" />
+                                            </div>
+                                            <h4>
+                                                Pessoa 3
+                                                <small><i class="fa fa-clock-o"></i> Today</small>
+                                            </h4>
+                                            <p>Mensagem de exemplo 3</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="/resources/img/avatar2.png" class="img-circle" alt="user image" />
+                                            </div>
+                                            <h4>
+                                                Pessoa 4
+                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                            </h4>
+                                            <p>Mensagem de exemplo 4</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span>{{#mustacheusername}}{{mustacheusername}}{{/mustacheusername}} <i class="caret"></i>
+                            </span>
+                        </a>
+                         <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header bg-light-blue">
+                                <img src="{{#avatar}}{{avatar}}{{/avatar}}" class="img-circle" alt="User Image" />
+                                 <p>
+                                    <i class="fa fa-user"> {{#mustacheusername}}{{mustacheusername}}{{/mustacheusername}} </i>
+                                    <small><i class="fa fa-home"> {{#userlocation}} {{userlocation}} {{/userlocation}} </i></small>
+                                    <small><i class="fa fa-star-o"> {{#userdate}} {{userdate}} {{/userdate}} </i></small>
+                                </p>
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Right side column. Contains the navbar and content of the page -->
+
+
+        <!-- Main content -->
+        <section class="content">
+            <!-- Small boxes (Stat box) -->
+            <div class="row">
+                <div class="col-lg-3 col-xs-6">
+                    <!-- small box -->
+                    <div class="user-box espacamento-2">
+                        <div class="inner ">
+                            <div class="user-panel">
+                                <div class="pull-left image">
+
+                                    <!--imagem de avatar-->
+                                    <img src="{{#avatar}}{{avatar}}{{/avatar}}" class="img-circle" alt="User Image" />
+                                </div>
+
+                                <div class="pull-left info">
+                                    <h5>Olá, seja bem vindo(a)</h5>
+                                    <h3><b>{{#mustacheusername}}{{mustacheusername}}{{/mustacheusername}}!</b></h3>
+                                </div>
+
+                            </div>
+                           
+                        </div>
+
+                          <!--Adicionar imagem de avatar fixa, se necessário-->
+                        <a class="small-box-footer">
+                         <i class="fa fa-home"> Mora em {{#userlocation}}{{userlocation}}{{/userlocation}}</i> <br>
+                         <i class="fa fa-star-o"> {{#userdate}}{{userdate}}{{/userdate}}</i>
+
+                        </a>
+                    </div>
+                </div>
+                <!-- ./col -->
+                <!-- Main row -->
+
+                <div class="row">
+                    <!-- Left col -->
+                    <section class="col-lg-7 connectedSortable">
+
+                        <!-- PESQUISA -->
+                        <div class="box box-solid box-danger page-search">
+                            <div class="box-header">
+                                <h3 class="box-title espacamento-2"> Persiga quem você quiser! MUAHAHAHAHAHAHA</h3>
+                              <form class="sidebar-form" action="/search/users" method="GET">
+                                  <div class="input-group page-search">
+                                    <input type="text" name="pesquisa" id="usuarioPesquisa" class="form-control" placeholder="Pesquisar vítimas..."/>
+                             
+                                      <span class="input-group-btn">
+                                        <button type="submit" id="search-btn" onclick="pesquisar()" class="btn btn-flat"> <i class="fa fa-search"></i></button>
+                                    </span>
+                                     </div> 
+                                 </form>
+                                   </div>
+                        </div>
+                        {{>/WEB-INF/pages/userAppendable.html}}
+                    </section>
+                    <!-- /.Left col -->
+                </div>
+                <!-- /.row (main row) -->
+        </section>
+        <!-- /.content -->
+        <footer>
+        <div class="footer-eai">
+                <span>&copy; CWI Software - Projeto Crescer</span>
+        </div>
+    </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <script src="/resources/js/jquery-2.1.1.min.js"></script>
+        <script src="/resources/js/bootstrap.js" type="text/javascript"></script>
+        <script src="/resources/js/jquery-ui.js" type="text/javascript"></script>
+        <script src="/resources/js/antisocial/app.js" type="text/javascript"></script>
+        <script src="/resources/js/antisocial/dashboard.js" type="text/javascript"></script>
+        <script src="/resources/js/classie.js" type="text/javascript"></script>
+        <script src="/resources/js/modernizr.custom.js" type="text/javascript"></script>
+        <script src="/resources/js/uisearch.js" type="text/javascript"></script>
+        <script src="/resources/js/search.js" type="text/javascript"></script>
+        <script>
+        $(function() {
+            $('.pull-right > a').click(function(event) {
+                $.ajax({
+                    url: '/logout',
+                    type: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    success: function(resultado) {
+                        location.href = "/home.html";
+                    }
+                });
+            });
+        });
+        </script>
+
+
+</body>
+
+</html>

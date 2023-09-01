@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>/WEB-INF/includes/headLogin.html}}
+
+<body>
+    <div class="container">
+
+        <header>
+            <img class="gif-login" src="/resources/img/gif-login.gif">
+            <img>
+            <h1 class="logo" style="font-size: 130px; margin: 70px; color: rgba(128,0,0,1.0);">Rede
+                <h1>
+                    <h1 class="logo" style="font-size: 150px; color: rgba(128,0,0,1.0);">anti-social
+                        <h1>
+
+        </header>
+        <section class="main">
+            <center class="login-fields">
+                <form class="form-1" action="/autentica" method="POST">
+                    <p class="field">
+                        <input type="text" name="email" placeholder="usuário" required>
+                        <i class="icon-envelope icon-large"></i>
+                    </p>
+                    <p class="field">
+                        <input type="password" name="senha" placeholder="senha" required>
+                        <i class="icon-lock icon-large"></i>
+                    </p>
+                    <p class="submit">
+                        <button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i>
+                        </button>
+                    </p>
+                    </p>
+                </form>
+                <p id="message">{{#message}}{{message}}{{/message}}</a>
+                    <span class="fontawesome-arrow-right"></span>
+                </p>
+                <p>Não é um membro? <a class="go-cadastro" href="#">Cadastre-se</a>
+                    <span class="fontawesome-arrow-right"></span>
+            </center>
+            <center class="cadastro-fields">
+                <div class="form-2">
+                    <p class="field">
+                        <input type="text" id="idnome" name="nome" placeholder="Nome" required>
+                    </p>
+
+                    <p class="field">
+                        <input type="text" id="idemail" name="email" placeholder="Email" required>
+                    </p>
+                    <p class="field">
+                        <input type="password" id="idsenha" name="senha" placeholder="Senha" required>
+                    </p>
+                    <p class="field">
+                        <input type="radio" name="genero" value="feminino"> Feminino
+                        <input type="radio" name="genero" value="masculino"> Masculino
+                        <input type="radio" name="genero" value="outro"> Transexual
+                    </p>
+                    <p class="field">
+                        <input type="text" id="idDataNascimento"  placeholder="Data de Nascimento" class="form-control" required>
+                    </p>
+
+                    <p class="field">
+                        <input type="text" id="idLocalizacao" name="localizacao" placeholder="Cidade" required>
+                    </p>
+                    <br>
+                    <p>
+                        <input id="idsubmit" type="submit" value="Sign In" style="float:right" onclick="userRegister()">
+                    </p>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Retornar ao login? <a class="go-login" href="#">Logar-se</a>
+                        <span class="fontawesome-arrow-right"></span>
+                    </p>
+                </div>
+            </center>
+        </section>
+    </div>
+    <script>
+    $(function () {
+        $('.cadastro-fields').hide();
+
+        $('.go-cadastro').click(function(event) {
+            $('.login-fields').hide();
+            $('.cadastro-fields').fadeIn('slow');
+        });
+
+        $('.go-login').click(function(event) {
+            $('.cadastro-fields').hide();
+            $('.login-fields').fadeIn('slow');
+        });
+    });
+
+    $('#idDataNascimento').datepicker({
+            format: "dd/mm/yyyy",
+            });
+    </script>
+</body>
+
+</html>
