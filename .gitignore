@@ -12,7 +12,7 @@
 
 # Package Files #
 *.jar
-*.war
+*.warq
 *.nar
 *.ear
 *.zip
@@ -23,5 +23,12 @@
 hs_err_pid*
 replay_pid*
 
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
 
 .svn/
+target/
